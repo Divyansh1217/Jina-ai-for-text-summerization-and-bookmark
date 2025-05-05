@@ -33,11 +33,3 @@ def fetch_summary(url):
         return "Summary temporarily unavailable."
 
 
-# Example usage
-url = "https://en.wikipedia.org/wiki/Artificial_intelligence"
-title, favicon = fetch_metadata(url)
-summary = fetch_summary(url)
-
-print("Title:", title)
-print("Favicon:", favicon)
-print("Summary:", summary)
