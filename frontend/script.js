@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000";
+const API_URL = "https://jina-ai-for-text-summerization-and.onrender.com/";
 
 function register() {
   const email = document.getElementById("regEmail").value;
