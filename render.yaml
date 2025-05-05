@@ -1,9 +1,15 @@
 services:
   - type: web
-    name: fastapi-backend
+    name: jina-backend
     env: python
+    region: oregon
     plan: free
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 8000
-    workingDir: backend
-    autoDeploy: true
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 8000"
+
+  - type: static
+    name: jina-frontend
+    rootDir: frontend
+    buildCommand: ""
+    staticPublishPath: .
