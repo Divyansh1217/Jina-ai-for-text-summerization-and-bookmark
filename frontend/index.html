@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmarks</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen p-4">
+  <div class="max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">📚 My Bookmarks</h1>
+
+    <!-- Tag Filter -->
+    <div class="mb-4">
+      <label for="tagFilter" class="block mb-2 text-sm font-medium">Filter by Tag:</label>
+      <select id="tagFilter" class="w-full p-2 rounded border border-gray-300">
+        <option value="all">All</option>
+        <option value="general">General</option>
+        <option value="tech">Tech</option>
+        <option value="news">News</option>
+      </select>
+    </div>
+
+    <!-- Bookmarks List -->
+    <ul id="bookmarkList" class="space-y-4"></ul>
+
+    <!-- Save Order Button -->
+    <button onclick="saveOrder()" class="mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">💾 Save Order</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
